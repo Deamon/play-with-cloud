@@ -17,6 +17,10 @@ monolog:
             type:   stream
             path:   "%kernel.logs_dir%/%kernel.environment%.log"
             level:  debug
+        heroku:
+            type:   stream
+            path:   "php://stderr"
+            level:  debug
         console:
             type:   console
             bubble: false
