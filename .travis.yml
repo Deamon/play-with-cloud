@@ -19,9 +19,8 @@ php:
 env:
   - DB=mysql
 #  - DB=pgsql
-  global:
-    - deps=no
-    - SYMFONY_DEPRECATIONS_HELPER=weak
+  - deps=no
+  - SYMFONY_DEPRECATIONS_HELPER=weak
 
 # optionally set up exclutions and allowed failures in the matrix
 matrix:
