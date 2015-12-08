@@ -33,7 +33,7 @@ matrix:
     - php: hhvm
 
 before_install:
-  - if [ "$deps" != "skip" ]; then composer self-update; fi;
+  - composer self-update;
 
 install:
   - composer --prefer-source install
