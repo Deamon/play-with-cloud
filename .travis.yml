@@ -17,10 +17,11 @@ php:
 
 # optionally specify a list of environments, for example to test different RDBMS
 env:
-  - DB=mysql
-#  - DB=pgsql
-  - deps=no
-  - SYMFONY_DEPRECATIONS_HELPER=weak
+  global:
+    - DB=mysql
+    #  - DB=pgsql
+    - deps=no
+    - SYMFONY_DEPRECATIONS_HELPER=weak
 
 # optionally set up exclutions and allowed failures in the matrix
 matrix:
