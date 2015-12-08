@@ -37,7 +37,8 @@ before_script:
 #  - if [[ "$DB" == "pgsql" ]]; then psql -c "DROP DATABASE IF EXISTS hello_world_test;" -U postgres; fi
 #  - if [[ "$DB" == "pgsql" ]]; then psql -c "create database hello_world_test;" -U postgres; fi
   - if [[ "$DB" == "mysql" ]]; then mysql -e "create database IF NOT EXISTS hello_world_test;" -uroot; fi
-  - if [ "$deps" != "skip" ]; then composer self-update; fi;
+#  - if [ "$deps" != "skip" ]; then composer self-update; fi;
+  - composer self-update;
 
 install:
   - composer --prefer-source install
