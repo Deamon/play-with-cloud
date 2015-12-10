@@ -33,7 +33,8 @@ matrix:
     - php: hhvm
 
 before_install:
-  - composer self-update;
+  - if [[ "$TRAVIS_PHP_VERSION" != "hhvm" ]]; then php -i; else hhvm --php -r 'print_r($_SERVER);print_r(ini_get_all());'; fi;
+  - if [ "$deps" != "skip" ]; then ./phpunit install; fi;
 
 install:
   - composer --prefer-source install
